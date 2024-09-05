@@ -1,7 +1,4 @@
----
-title: Lycan's Tech Corner
-layout: default
----
+
 
 # Welcome to Lycan's Tech Corner! 🖥️🚀
 
