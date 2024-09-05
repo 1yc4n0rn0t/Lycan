@@ -19,6 +19,8 @@
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #50fa7b; /* Subtle green border */
+            margin: 0 auto;
+            max-width: 90%; /* Limit width to avoid full page width */
         }
         
         h1, h2 {
@@ -37,7 +39,7 @@
         section {
             padding: 20px;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto; /* Center content and add margin from top and bottom */
             background-color: #1e2024; /* Slightly lighter dark background for content */
             border-radius: 8px; /* Rounded corners for a modern look */
         }
@@ -56,10 +58,12 @@
             color: #abb2bf;
             text-align: center;
             padding: 15px;
-            position: fixed;
+            position: relative;
             bottom: 0;
-            width: 100%;
+            width: calc(100% - 40px); /* Adjust width to include padding */
+            margin: 20px auto; /* Center footer and add margin from top and bottom */
             border-top: 1px solid #50fa7b; /* Subtle green border for footer */
+            border-radius: 8px; /* Rounded corners for footer */
         }
         
         code {
@@ -95,6 +99,7 @@
 
             section {
                 padding: 15px;
+                margin: 15px auto;
             }
         }
     </style>
