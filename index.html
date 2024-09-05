@@ -8,25 +8,25 @@
         body {
             background-color: #282c34;
             color: #abb2bf;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Source Code Pro', monospace;
             margin: 0;
             padding: 0;
         }
         
         header {
             background-color: #21252b;
-            color: #61afef;
+            color: #50fa7b; /* Hacker green */
             padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #50fa7b;
         }
         
         h1, h2 {
-            color: #e06c75;
+            color: #50fa7b; /* Hacker green */
         }
         
         a {
-            color: #61afef;
+            color: #50fa7b; /* Hacker green */
             text-decoration: none;
         }
         
@@ -36,6 +36,8 @@
         
         section {
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         ul {
@@ -55,20 +57,22 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            border-top: 2px solid #50fa7b;
         }
         
         code {
             background-color: #3e4451;
             border-radius: 3px;
             padding: 2px 4px;
-            color: #d19a66;
+            color: #50fa7b; /* Hacker green */
         }
         
         blockquote {
-            border-left: 4px solid #61afef;
+            border-left: 4px solid #50fa7b; /* Hacker green */
             padding-left: 15px;
             margin: 10px 0;
             color: #5c6370;
+            font-style: italic;
         }
         
         pre {
@@ -76,7 +80,18 @@
             border-radius: 5px;
             padding: 10px;
             overflow-x: auto;
-            color: #e06c75;
+            color: #50fa7b; /* Hacker green */
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 600px) {
+            header, footer {
+                padding: 15px;
+            }
+
+            section {
+                padding: 15px;
+            }
         }
     </style>
 </head>
