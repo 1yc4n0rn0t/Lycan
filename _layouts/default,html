@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/tactile/assets/css/style.css?v=dfd365991d467e0fbdecdc84becdd7bec532119a">
+    <link rel="stylesheet" type="text/css" href="/tactile/assets/css/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>Lycan - Programmer & Tech Enthusiast</title>
+    <meta name="generator" content="Jekyll v3.9.0" />
+    <meta property="og:title" content="Lycan - Programmer & Tech Enthusiast" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Lycan is a motivated programmer and tech enthusiast always on the prowl for new opportunities." />
+    <meta property="og:description" content="Lycan is a motivated programmer and tech enthusiast always on the prowl for new opportunities." />
+    <meta property="og:url" content="https://yourwebsite.com/lycan" />
+    <meta property="og:site_name" content="Lycan's Tech Corner" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Lycan - Programmer & Tech Enthusiast" />
+    <script type="application/ld+json">
+    {
+      "description": "Lycan is a motivated programmer and tech enthusiast always on the prowl for new opportunities.",
+      "url": "https://yourwebsite.com/lycan",
+      "@type": "Person",
+      "name": "Lycan",
+      "@context": "https://schema.org"
+    }
+    </script>
+    <!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Lycan</h1>
+          <h2>Programmer, Tech Enthusiast, and Motivated Individual</h2>
+        </header>
+        
+        <section id="main_content">
+          <p>Hello! I'm <strong>Lycan</strong>, a passionate <strong>programmer</strong> and <strong>tech enthusiast</strong> always on the lookout for new and exciting opportunities in technology.</p>
+          
+          <p>With a keen interest in <em>software development</em>, I enjoy exploring the latest trends and advancements in the tech world. Whether it's <strong>coding</strong> innovative solutions, <em>developing</em> engaging applications, or <strong>learning</strong> new programming languages, I'm driven by the challenge of continuous improvement.</p>
+
+          <p>Here's a bit more about me:</p>
+          
+          <h2>Skills and Interests</h2>
+          <ul>
+            <li><strong>Programming Languages:</strong> JavaScript, Python, Ruby, and more</li>
+            <li><strong>Tech Enthusiasm:</strong> Cloud Computing, AI, Blockchain</li>
+            <li><strong>Motivated Learner:</strong> Always eager to dive into new tech opportunities</li>
+          </ul>
+
+          <h2>Get in Touch</h2>
+          <p>If you'd like to collaborate or just chat about tech, feel free to <a href="mailto:lycan@example.com">email me</a> or connect with me on <a href="https://www.linkedin.com/in/lycan">LinkedIn</a>.</p>
+        </section>
+
+        <footer>
+          Lycan's Tech Corner is maintained by <a href="https://yourwebsite.com">Lycan</a><br>
+          This page was generated with ❤️ by <a href="https://github.com/pages-themes">GitHub Pages</a>.
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
