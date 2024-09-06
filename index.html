@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lycan's Tech Corner</title>
+    <title>Lycan's Terminal</title>
     <style>
         body {
-            background-color: #282c34; /* Atom One Dark background */
-            color: #abb2bf; /* Light gray text */
-            font-family: 'Source Code Pro', monospace; /* Monospace font for a tech feel */
+            background-color: #000000; /* Terminal black background */
+            color: #00ff00; /* Terminal green text */
+            font-family: 'Source Code Pro', monospace; /* Monospace font for terminal look */
             margin: 0;
             padding: 0;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         
         header {
-            background-color: #21252b; /* Darker background for header */
-            color: #50fa7b; /* Hacker green for header text */
+            background-color: #001f00; /* Darker black for header */
+            color: #00ff00; /* Green for header text */
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #50fa7b; /* Subtle green border */
-            margin: 0 auto;
-            max-width: 90%; /* Limit width to avoid full page width */
+            border-bottom: 1px solid #00ff00; /* Green border */
         }
         
         h1, h2 {
-            color: #50fa7b; /* Hacker green for headings */
+            color: #00ff00; /* Terminal green for headings */
+            margin: 0;
+            padding: 0;
         }
         
         a {
-            color: #50fa7b; /* Hacker green for links */
+            color: #00ff00; /* Terminal green for links */
             text-decoration: none;
         }
         
@@ -40,71 +40,81 @@
         section {
             padding: 20px;
             max-width: 800px;
-            margin: 40px auto; /* Add margin between sections */
-            background-color: #1e2024; /* Slightly lighter dark background for content */
-            border-radius: 8px; /* Rounded corners for a modern look */
-            border: 1px solid #50fa7b; /* Subtle green border */
+            margin: 20px auto;
+            background-color: #002200; /* Slightly lighter black for content */
+            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #00ff00; /* Green border */
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow for depth */
         }
         
         footer {
-            background-color: #21252b;
-            color: #abb2bf;
+            background-color: #001f00;
+            color: #00ff00;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             position: relative;
             bottom: 0;
-            width: calc(100% - 40px); /* Adjust width to include padding */
-            margin: 40px auto; /* Add margin between sections */
-            border-top: 1px solid #50fa7b; /* Subtle green border for footer */
-            border-radius: 8px; /* Rounded corners for footer */
+            width: 100%;
+            border-top: 1px solid #00ff00; /* Green border */
         }
         
         code {
-            background-color: #3e4451; /* Darker background for code */
+            background-color: #003300; /* Darker green for code background */
             border-radius: 3px;
             padding: 2px 4px;
-            color: #50fa7b; /* Hacker green for code */
+            color: #00ff00; /* Green for code text */
         }
         
         blockquote {
-            border-left: 4px solid #50fa7b; /* Hacker green for blockquote */
+            border-left: 4px solid #00ff00; /* Green for blockquote border */
             padding-left: 15px;
-            margin: 20px 0; /* Add margin around blockquote */
-            color: #5c6370;
+            margin: 20px 0;
+            color: #00ff00;
             font-style: italic;
-            background-color: #2c313c; /* Background for blockquote */
+            background-color: #003300; /* Background for blockquote */
             border-radius: 5px;
         }
         
         pre {
-            background-color: #2c313c; /* Background for preformatted text */
+            background-color: #003300; /* Background for preformatted text */
             border-radius: 5px;
             padding: 10px;
             overflow-x: auto;
-            color: #50fa7b; /* Hacker green for preformatted text */
+            color: #00ff00; /* Green for preformatted text */
         }
 
         .typewriter {
-            font-family: 'Source Code Pro', monospace; /* Monospace font for terminal feel */
-            white-space: pre-wrap; /* Preserve whitespace */
-            overflow: hidden; /* Hide text overflow */
-            border-right: 2px solid #50fa7b; /* Cursor effect */
-            width: 100%; /* Full width */
+            font-family: 'Source Code Pro', monospace;
+            white-space: pre-wrap;
+            overflow: hidden;
+            border-right: 2px solid #00ff00; /* Cursor effect */
+            width: 100%;
+            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
         }
-        
-        .hidden {
-            display: none; /* Hide elements initially */
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
         }
-        
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #00ff00; }
+        }
+
         p {
-            margin: 0; /* Remove margin to avoid extra space between lines */
+            margin: 0; /* Remove margin for consistent spacing */
+        }
+
+        .section-gap {
+            margin-top: 20px; /* Space between sections */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Lycan's Tech Corner 🖥️🚀</h1>
-        <h2>A Journey Through Tech and Programming</h2>
+        <h1>Lycan's Terminal</h1>
+        <h2>Welcome to the digital realm</h2>
     </header>
     
     <section>
@@ -114,42 +124,40 @@
     </section>
     
     <footer>
-        Thank you for visiting my GitHub Pages site. I appreciate your time and hope you find something interesting. Feel free to explore and connect. 😊<br>
-        *Lycan's Tech Corner is maintained by <a href="https://yourwebsite.com">Lycan</a>. This page was crafted with care using GitHub Pages.*
+        Thanks for visiting my terminal! 🚀<br>
+        *Lycan's Terminal is maintained by <a href="https://yourwebsite.com">Lycan</a>. Crafted with care using HTML, CSS, and JavaScript.*
     </footer>
 
     <script>
         // Typewriter effect JavaScript
         const contentElement = document.getElementById('content');
         const contentLines = [
-            "Hello! I'm Lycan, and I’m passionate about programming and technology. I’m always keen on exploring new tech opportunities and improving my skills. 😊",
-            "With a background in software development, I enjoy working on coding projects and finding solutions to complex problems. My goal is to keep learning and growing in this ever-evolving field. 💻",
-            "Skills and Interests",
+            "Welcome to Lycan's Terminal! I’m excited to share my journey in the tech world with you.",
             "",
-            "Programming Languages: JavaScript, Python, Ruby, and others I’m continuously learning. 📚",
-            "Tech Interests: Cloud Computing, AI, and emerging technologies. 🌐",
-            "Motivated Learner: Always eager to discover new tech and improve my skills. 🌟",
+            "About Me:",
             "",
-            "Community Involvement",
+            "I’m Lycan, a humble tech enthusiast and programmer always on the lookout for new challenges and opportunities in technology.",
             "",
-            "I’m also a Discord moderator for Hack Nexus. I help manage the community, ensuring everything runs smoothly and that everyone has a positive experience. It’s a rewarding role where I can contribute and learn from fellow tech enthusiasts. 👥",
+            "My Skills:",
             "",
-            "The Thrill of Hacking",
+            "Programming Languages: JavaScript, Python, Ruby, and others.",
+            "Tech Interests: Cloud Computing, AI, and the latest trends in tech.",
+            "Always Learning: Eager to discover and grow in the tech landscape.",
             "",
-            "Hacking, when done ethically, is a fascinating way to understand and interact with technology on a deeper level. It’s not just about breaking into systems—it's about finding innovative solutions and uncovering hidden potentials in software and hardware. Whether it’s exploring vulnerabilities to enhance security or developing creative tech solutions, hacking is a tool for both learning and innovation. 🔍💡",
+            "Community Role:",
             "",
-            "In the world of ethical hacking, we strive to make technology safer and more efficient. It’s about using skills for positive outcomes and contributing to the greater good of the tech community. I find immense satisfaction in being part of this dynamic field and constantly exploring its boundaries. 🌍",
+            "I also serve as a Discord moderator for Hack Nexus, where I help manage and support the community.",
             "",
-            "Get in Touch",
+            "The Joy of Hacking:",
             "",
-            "If you’d like to connect or discuss tech, feel free to:",
-            "Email me – I’d be happy to chat. 😊",
-            "Connect with me on LinkedIn – Let’s network and share ideas. 🤝"
+            "Hacking is about exploring, understanding, and improving technology. It’s a field full of innovation and discovery.",
+            "",
+            "Feel free to reach out or connect with me if you’re interested in tech or just want to chat!"
         ];
 
         let currentLine = 0;
         let currentChar = 0;
-        let typingSpeed = 40; // Adjusted typing speed
+        let typingSpeed = 30; // Adjust typing speed
         let typingTimer;
 
         function typeLine() {
@@ -166,7 +174,7 @@
                 } else {
                     currentChar = 0;
                     currentLine++;
-                    setTimeout(typeLine, 200); // Shorter delay between lines
+                    setTimeout(typeLine, 100); // Shorter delay between lines
                 }
             }
 
