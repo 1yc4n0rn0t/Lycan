@@ -3,93 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lycan's Terminal</title>
+    <title>Lycan's Hacking Terminal</title>
     <style>
         body {
-            background-color: #000000; /* Terminal black background */
-            color: #00ff00; /* Terminal green text */
-            font-family: 'Source Code Pro', monospace; /* Monospace font for terminal look */
+            background-color: #1e1e1e; /* Dark background for a terminal look */
+            color: #00ff00; /* Hacker green text */
+            font-family: 'Source Code Pro', monospace; /* Monospace font for terminal appearance */
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
-        
+
         header {
-            background-color: #001f00; /* Darker black for header */
-            color: #00ff00; /* Green for header text */
+            background-color: #000000; /* Black header */
+            color: #00ff00; /* Hacker green text */
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #00ff00; /* Green border */
+            border-bottom: 2px solid #00ff00; /* Green border */
         }
-        
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #282c34; /* Dark background for content */
+            border-radius: 5px;
+            border: 1px solid #00ff00; /* Green border */
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow */
+        }
+
         h1, h2 {
-            color: #00ff00; /* Terminal green for headings */
             margin: 0;
             padding: 0;
+            color: #00ff00; /* Hacker green */
         }
-        
+
         a {
-            color: #00ff00; /* Terminal green for links */
+            color: #00ff00; /* Green links */
             text-decoration: none;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
-        
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #002200; /* Slightly lighter black for content */
-            border-radius: 5px; /* Rounded corners */
-            border: 1px solid #00ff00; /* Green border */
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow for depth */
+
+        p, blockquote, pre {
+            margin: 0 0 10px;
+            padding: 0;
         }
-        
-        footer {
-            background-color: #001f00;
-            color: #00ff00;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            border-top: 1px solid #00ff00; /* Green border */
-        }
-        
-        code {
-            background-color: #003300; /* Darker green for code background */
-            border-radius: 3px;
-            padding: 2px 4px;
-            color: #00ff00; /* Green for code text */
-        }
-        
+
         blockquote {
-            border-left: 4px solid #00ff00; /* Green for blockquote border */
+            border-left: 4px solid #00ff00; /* Green border for blockquotes */
             padding-left: 15px;
-            margin: 20px 0;
-            color: #00ff00;
+            color: #00ff00; /* Green text */
             font-style: italic;
-            background-color: #003300; /* Background for blockquote */
-            border-radius: 5px;
+            background-color: #1e1e1e; /* Dark background */
         }
-        
+
         pre {
-            background-color: #003300; /* Background for preformatted text */
-            border-radius: 5px;
+            background-color: #2d2d2d; /* Darker background for code blocks */
             padding: 10px;
+            border-radius: 5px;
             overflow-x: auto;
-            color: #00ff00; /* Green for preformatted text */
         }
 
         .typewriter {
-            font-family: 'Source Code Pro', monospace;
             white-space: pre-wrap;
             overflow: hidden;
-            border-right: 2px solid #00ff00; /* Cursor effect */
-            width: 100%;
-            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+            border-right: 2px solid #00ff00; /* Green cursor */
+            animation: typing 4s steps(50, end), blink-caret .75s step-end infinite;
         }
 
         @keyframes typing {
@@ -102,8 +84,15 @@
             50% { border-color: #00ff00; }
         }
 
-        p {
-            margin: 0; /* Remove margin for consistent spacing */
+        footer {
+            background-color: #000000; /* Black footer */
+            color: #00ff00; /* Green text */
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #00ff00; /* Green border */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         .section-gap {
@@ -113,51 +102,51 @@
 </head>
 <body>
     <header>
-        <h1>Lycan's Terminal</h1>
-        <h2>Welcome to the digital realm</h2>
+        <h1>Lycan's Hacking Terminal</h1>
+        <h2>Welcome to the digital frontier</h2>
     </header>
     
-    <section>
+    <main>
         <div id="content" class="typewriter">
             <!-- Content will be dynamically inserted here -->
         </div>
-    </section>
+    </main>
     
     <footer>
-        Thanks for visiting my terminal! 🚀<br>
-        *Lycan's Terminal is maintained by <a href="https://yourwebsite.com">Lycan</a>. Crafted with care using HTML, CSS, and JavaScript.*
+        Thank you for visiting! 🚀<br>
+        *This site is crafted with HTML, CSS, and a touch of hacker aesthetic.*
     </footer>
 
     <script>
         // Typewriter effect JavaScript
         const contentElement = document.getElementById('content');
         const contentLines = [
-            "Welcome to Lycan's Terminal! I’m excited to share my journey in the tech world with you.",
+            "Welcome to Lycan's Hacking Terminal! I’m thrilled to share my tech journey with you.",
             "",
             "About Me:",
             "",
-            "I’m Lycan, a humble tech enthusiast and programmer always on the lookout for new challenges and opportunities in technology.",
+            "I’m Lycan, a dedicated tech enthusiast and programmer with a keen eye for new challenges.",
             "",
             "My Skills:",
             "",
-            "Programming Languages: JavaScript, Python, Ruby, and others.",
-            "Tech Interests: Cloud Computing, AI, and the latest trends in tech.",
-            "Always Learning: Eager to discover and grow in the tech landscape.",
+            "Programming Languages: JavaScript, Python, Ruby, and more.",
+            "Tech Interests: Cloud Computing, AI, and cutting-edge technologies.",
+            "Always Learning: Continuously evolving in the tech world.",
             "",
             "Community Role:",
             "",
-            "I also serve as a Discord moderator for Hack Nexus, where I help manage and support the community.",
+            "I also moderate the Hack Nexus Discord, supporting and engaging with the community.",
             "",
-            "The Joy of Hacking:",
+            "The Thrill of Hacking:",
             "",
-            "Hacking is about exploring, understanding, and improving technology. It’s a field full of innovation and discovery.",
+            "Hacking is about pushing boundaries, exploring new tech, and making innovations. It’s a world full of opportunities and excitement.",
             "",
-            "Feel free to reach out or connect with me if you’re interested in tech or just want to chat!"
+            "Feel free to connect or reach out if you’re interested in tech or just want to chat!"
         ];
 
         let currentLine = 0;
         let currentChar = 0;
-        let typingSpeed = 30; // Adjust typing speed
+        let typingSpeed = 20; // Typing speed
         let typingTimer;
 
         function typeLine() {
@@ -174,7 +163,7 @@
                 } else {
                     currentChar = 0;
                     currentLine++;
-                    setTimeout(typeLine, 100); // Shorter delay between lines
+                    setTimeout(typeLine, 500); // Delay between lines
                 }
             }
 
