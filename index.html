@@ -42,6 +42,7 @@
             margin: 20px auto; /* Center content and add margin from top and bottom */
             background-color: #1e2024; /* Slightly lighter dark background for content */
             border-radius: 8px; /* Rounded corners for a modern look */
+            position: relative; /* Position relative for typewriter effect */
         }
         
         ul {
@@ -91,6 +92,25 @@
             color: #50fa7b; /* Hacker green for preformatted text */
         }
 
+        .typewriter {
+            font-family: 'Source Code Pro', monospace; /* Monospace font for terminal feel */
+            white-space: pre-wrap; /* Preserve whitespace */
+            overflow: hidden; /* Hide text overflow */
+            border-right: 2px solid #50fa7b; /* Cursor effect */
+            width: 0; /* Start with width of 0 */
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #50fa7b; }
+        }
+
         /* Responsive design adjustments */
         @media (max-width: 600px) {
             header, footer {
@@ -111,31 +131,32 @@
     </header>
     
     <section>
-        <p>Hello! I'm <strong>Lycan</strong>, and I’m passionate about <strong>programming</strong> and technology. I’m always keen on exploring new tech opportunities and improving my skills. I hope to contribute positively to the tech community and learn along the way. 😊</p>
+        <div class="typewriter">
+            <p>Hello! I'm <strong>Lycan</strong>, and I’m passionate about <strong>programming</strong> and technology. I’m always keen on exploring new tech opportunities and improving my skills. I hope to contribute positively to the tech community and learn along the way. 😊</p>
+            <p>With a background in <strong>software development</strong>, I enjoy working on coding projects and finding solutions to complex problems. My goal is to keep learning and growing in this ever-evolving field. 💻</p>
         
-        <p>With a background in <strong>software development</strong>, I enjoy working on coding projects and finding solutions to complex problems. My goal is to keep learning and growing in this ever-evolving field. 💻</p>
+            <h2>Skills and Interests</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> JavaScript, Python, Ruby, and others I’m continuously learning. 📚</li>
+                <li><strong>Tech Interests:</strong> Cloud Computing, AI, and emerging technologies. 🌐</li>
+                <li><strong>Motivated Learner:</strong> Always eager to discover new tech and improve my skills. 🌟</li>
+            </ul>
         
-        <h2>Skills and Interests</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> JavaScript, Python, Ruby, and others I’m continuously learning. 📚</li>
-            <li><strong>Tech Interests:</strong> Cloud Computing, AI, and emerging technologies. 🌐</li>
-            <li><strong>Motivated Learner:</strong> Always eager to discover new tech and improve my skills. 🌟</li>
-        </ul>
+            <h2>Community Involvement</h2>
+            <p>I’m also a <em>Discord moderator</em> for <strong>Hack Nexus</strong>. I help manage the community, ensuring everything runs smoothly and that everyone has a positive experience. It’s a rewarding role where I can contribute and learn from fellow tech enthusiasts. 👥</p>
         
-        <h2>Community Involvement</h2>
-        <p>I’m also a <em>Discord moderator</em> for <strong>Hack Nexus</strong>. I help manage the community, ensuring everything runs smoothly and that everyone has a positive experience. It’s a rewarding role where I can contribute and learn from fellow tech enthusiasts. 👥</p>
+            <h2>The Thrill of Hacking</h2>
+            <p>Hacking, when done ethically, is a fascinating way to understand and interact with technology on a deeper level. It’s not just about breaking into systems—it's about finding innovative solutions and uncovering hidden potentials in software and hardware. Whether it’s exploring vulnerabilities to enhance security or developing creative tech solutions, hacking is a tool for both learning and innovation. 🔍💡</p>
         
-        <h2>The Thrill of Hacking</h2>
-        <p>Hacking, when done ethically, is a fascinating way to understand and interact with technology on a deeper level. It’s not just about breaking into systems—it's about finding innovative solutions and uncovering hidden potentials in software and hardware. Whether it’s exploring vulnerabilities to enhance security or developing creative tech solutions, hacking is a tool for both learning and innovation. 🔍💡</p>
+            <p>In the world of ethical hacking, we strive to make technology safer and more efficient. It’s about using skills for positive outcomes and contributing to the greater good of the tech community. I find immense satisfaction in being part of this dynamic field and constantly exploring its boundaries. 🌍</p>
         
-        <p>In the world of ethical hacking, we strive to make technology safer and more efficient. It’s about using skills for positive outcomes and contributing to the greater good of the tech community. I find immense satisfaction in being part of this dynamic field and constantly exploring its boundaries. 🌍</p>
-        
-        <h2>Get in Touch</h2>
-        <p>If you’d like to connect or discuss tech, feel free to:</p>
-        <ul>
-            <li><a href="mailto:lycan@example.com"><strong>Email me</strong></a> – I’d be happy to chat. 😊</li>
-            <li>Connect with me on <a href="https://www.linkedin.com/in/lycan"><strong>LinkedIn</strong></a> – Let’s network and share ideas. 🤝</li>
-        </ul>
+            <h2>Get in Touch</h2>
+            <p>If you’d like to connect or discuss tech, feel free to:</p>
+            <ul>
+                <li><a href="mailto:lycan@example.com"><strong>Email me</strong></a> – I’d be happy to chat. 😊</li>
+                <li>Connect with me on <a href="https://www.linkedin.com/in/lycan"><strong>LinkedIn</strong></a> – Let’s network and share ideas. 🤝</li>
+            </ul>
+        </div>
     </section>
     
     <footer>
