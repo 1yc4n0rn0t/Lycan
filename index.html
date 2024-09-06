@@ -8,8 +8,8 @@
         body {
             margin: 0;
             padding: 0;
-            background: #000;
-            color: #0f0;
+            background: #282c34; /* Atom One Dark background */
+            color: #abb2bf; /* Atom One Dark text color */
             font-family: 'Courier New', Courier, monospace;
         }
 
@@ -18,10 +18,10 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            border: 1px solid #0f0;
-            background: #000;
+            border: 1px solid #61afef; /* Atom One Dark accent color */
+            background: #21252b; /* Atom One Dark terminal background */
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
         .header {
@@ -35,35 +35,45 @@
             height: 12px;
             border-radius: 50%;
             margin-right: 5px;
-            background-color: #f00;
+        }
+
+        .dot.red {
+            background-color: #e06c75; /* Atom One Dark red */
         }
 
         .dot.yellow {
-            background-color: #ff0;
+            background-color: #e5c07b; /* Atom One Dark yellow */
         }
 
         .dot.green {
-            background-color: #0f0;
+            background-color: #98c379; /* Atom One Dark green */
         }
 
         .title {
             font-weight: bold;
+            color: #61afef; /* Atom One Dark accent color */
         }
 
         .content {
             white-space: pre-wrap;
+            line-height: 1.5;
         }
 
         .prompt {
             margin: 0;
+            color: #c678dd; /* Atom One Dark purple */
         }
 
         .command {
-            color: #0f0;
+            color: #98c379; /* Atom One Dark green */
         }
 
         .output {
             margin: 0;
+        }
+
+        .output strong {
+            color: #e5c07b; /* Atom One Dark yellow */
         }
     </style>
 </head>
