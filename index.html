@@ -70,6 +70,20 @@
 
         .output {
             margin: 0;
+            display: inline-block;
+            overflow: hidden; /* Ensures the typing effect hides overflow */
+            white-space: nowrap;
+            border-right: 2px solid #abb2bf; /* Cursor effect */
+            animation: typing 5s steps(40, end), blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
 
         .output strong {
@@ -87,11 +101,30 @@
         </div>
         <div class="content">
             <p class="prompt">lycan@hacker:~$ <span class="command">about</span></p>
-            <p class="output">
+            <p class="output" id="output">
                 <strong>About Lycan:</strong><br>
                 I am a passionate hacker and Discord moderator. My expertise lies in ethical hacking, where I use my skills to secure systems and find vulnerabilities. As a Discord mod, I ensure that the community remains a safe and enjoyable place for everyone. My interests include cybersecurity, coding, and contributing to open-source projects.
             </p>
         </div>
     </div>
+
+    <script>
+        // JavaScript to handle typing effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const output = document.getElementById('output');
+            const text = output.innerHTML;
+            output.innerHTML = ''; // Clear existing content
+
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    output.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, 50); // Adjust typing speed here
+                }
+            }
+            type();
+        });
+    </script>
 </body>
 </html>
