@@ -22,6 +22,7 @@
             background: #21252b; /* Atom One Dark terminal background */
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            overflow: hidden; /* Hide overflowing content */
         }
 
         .header {
@@ -69,25 +70,15 @@
         }
 
         .output {
-            margin: 0;
             display: inline-block;
-            overflow: hidden; /* Ensures the typing effect hides overflow */
+            overflow: hidden; /* Hide text until it is typed out */
             white-space: nowrap;
             border-right: 2px solid #abb2bf; /* Cursor effect */
-            animation: typing 5s steps(40, end), blink 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+            animation: blink 0.75s step-end infinite;
         }
 
         @keyframes blink {
             50% { border-color: transparent; }
-        }
-
-        .output strong {
-            color: #e5c07b; /* Atom One Dark yellow */
         }
     </style>
 </head>
@@ -101,10 +92,7 @@
         </div>
         <div class="content">
             <p class="prompt">lycan@hacker:~$ <span class="command">about</span></p>
-            <p class="output" id="output">
-                <strong>About Lycan:</strong><br>
-                I am a passionate hacker and Discord moderator. My expertise lies in ethical hacking, where I use my skills to secure systems and find vulnerabilities. As a Discord mod, I ensure that the community remains a safe and enjoyable place for everyone. My interests include cybersecurity, coding, and contributing to open-source projects.
-            </p>
+            <p class="output" id="output"></p>
         </div>
     </div>
 
@@ -112,8 +100,10 @@
         // JavaScript to handle typing effect
         document.addEventListener('DOMContentLoaded', function () {
             const output = document.getElementById('output');
-            const text = output.innerHTML;
-            output.innerHTML = ''; // Clear existing content
+            const text = `
+<strong>About Lycan:</strong>
+I am a passionate hacker and Discord moderator. My expertise lies in ethical hacking, where I use my skills to secure systems and find vulnerabilities. As a Discord mod, I ensure that the community remains a safe and enjoyable place for everyone. My interests include cybersecurity, coding, and contributing to open-source projects.
+            `.trim();
 
             let index = 0;
             function type() {
