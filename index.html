@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+take this code and take the terminal cursor out completley: take this updated code and take the terminal cursor an put it at the end of each line while the typing effect is going, like a real linux terminal: <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,10 +26,9 @@
             border-radius: 5px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
             overflow: hidden; /* Hide overflowing content */
+            position: relative; /* Position for cursor */
             color: #abb2bf;
             font-size: 16px;
-            height: 300px; /* Fixed height for the terminal */
-            overflow-y: auto; /* Enable vertical scrolling if content overflows */
         }
 
         .header {
@@ -76,8 +75,16 @@
         }
 
         .output {
+            display: inline-block;
+            overflow: hidden; /* Hide text until it is typed out */
             white-space: pre-wrap; /* Preserve whitespace */
+            border-right: 2px solid #abb2bf; /* Cursor effect */
+            animation: blink 0.75s step-end infinite;
             color: #abb2bf; /* Ensure text color matches */
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
     </style>
 </head>
@@ -90,7 +97,7 @@
         </div>
         <div class="content">
             <p class="prompt">lycan@lol:~$ <span class="command">about</span></p>
-            <pre class="pre">
+              <pre>
 ██╗    ███████████╗     ██████╗██████╗███╗   ██████████╗
 ██║    ████╔════██║    ██╔════██╔═══██████╗ ██████╔════╝
 ██║ █╗ ███████╗ ██║    ██║    ██║   ████╔████╔███████╗  
@@ -98,15 +105,17 @@
 ╚███╔███╔██████████████╚██████╚██████╔██║ ╚═╝ █████████╗
  ╚══╝╚══╝╚══════╚══════╝╚═════╝╚═════╝╚═╝     ╚═╚══════╝
                                                         
-            </pre>
+        </pre>
             <p class="output" id="output"></p>
+          
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const output = document.getElementById('output');
-            const text = `
+            const text = 
+            
 Initializing. . . . . . . . . 0%[████████████████████████████████╗]100%
 I'm not a hacker nor a  programmer, but I am Discord moderator. My interests include cybersecurity, coding, and contributing to open-source projects. As a Discord mod, I ensure that the community remains a safe and enjoyable. 
 Collecting...Downloading
@@ -120,7 +129,7 @@ _______________________________________________
 3. Don't get lost in the mantra, for lack of better terms, dont drink the koolaid.
 _______________________________________________
 4. Just remember, if you go to the darkside its difficult to come back to the light.
-            `.trim();
+            .trim();
 
             let index = 0;
             function type() {
@@ -128,8 +137,6 @@ _______________________________________________
                     // Append character by character
                     output.innerHTML += text.charAt(index);
                     index++;
-                    // Scroll to the bottom of the output
-                    output.scrollTop = output.scrollHeight;
                     // Adjust typing speed here
                     setTimeout(type, 30);
                 }
