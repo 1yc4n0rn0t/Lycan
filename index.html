@@ -94,6 +94,10 @@
         .hidden {
             display: none; /* Hide elements initially */
         }
+        
+        p {
+            margin: 0; /* Remove margin to avoid extra space between lines */
+        }
     </style>
 </head>
 <body>
@@ -136,7 +140,7 @@
 
         let currentLine = 0;
         let currentChar = 0;
-        let typingSpeed = 50; // Typing speed in milliseconds
+        let typingSpeed = 30; // Faster typing speed in milliseconds
         let typingTimer;
 
         function typeLine() {
@@ -153,8 +157,7 @@
                 } else {
                     currentChar = 0;
                     currentLine++;
-                    contentElement.appendChild(document.createElement('br'));
-                    setTimeout(typeLine, 500); // Add delay between lines
+                    setTimeout(typeLine, 200); // Shorter delay between lines
                 }
             }
 
