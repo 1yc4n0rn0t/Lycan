@@ -26,7 +26,6 @@
             border-radius: 5px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
             overflow: hidden; /* Hide overflowing content */
-            position: relative; /* Position for cursor */
             color: #abb2bf;
             font-size: 16px;
             height: 300px; /* Fixed height for the terminal */
@@ -77,17 +76,8 @@
         }
 
         .output {
-            display: inline-block;
-            overflow: hidden; /* Hide text until it is typed out */
             white-space: pre-wrap; /* Preserve whitespace */
-            border-right: 2px solid #abb2bf; /* Cursor effect */
-            animation: blink 0.75s step-end infinite;
             color: #abb2bf; /* Ensure text color matches */
-            position: relative; /* For cursor positioning */
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
         }
     </style>
 </head>
