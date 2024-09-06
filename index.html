@@ -11,19 +11,24 @@
             background: #282c34; /* Atom One Dark background */
             color: #abb2bf; /* Atom One Dark text color */
             font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .terminal {
             width: 80%;
             max-width: 800px;
-            margin: 50px auto;
             padding: 20px;
             border: 1px solid #61afef; /* Atom One Dark accent color */
             background: #21252b; /* Atom One Dark terminal background */
             border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
             overflow: hidden; /* Hide overflowing content */
             position: relative; /* Position for cursor */
+            color: #abb2bf;
+            font-size: 16px;
         }
 
         .header {
@@ -62,7 +67,6 @@
         }
 
         .prompt {
-            margin: 0;
             color: #c678dd; /* Atom One Dark purple */
         }
 
@@ -73,10 +77,10 @@
         .output {
             display: inline-block;
             overflow: hidden; /* Hide text until it is typed out */
-            white-space: nowrap;
+            white-space: pre-wrap; /* Preserve whitespace */
             border-right: 2px solid #abb2bf; /* Cursor effect */
             animation: blink 0.75s step-end infinite;
-            font-family: 'Courier New', Courier, monospace; /* Match terminal font */
+            color: #abb2bf; /* Ensure text color matches */
         }
 
         @keyframes blink {
@@ -99,7 +103,6 @@
     </div>
 
     <script>
-        // JavaScript to handle typing effect
         document.addEventListener('DOMContentLoaded', function () {
             const output = document.getElementById('output');
             const text = `
@@ -114,7 +117,7 @@ I am a passionate hacker and Discord moderator. My expertise lies in ethical hac
                     output.innerHTML += text.charAt(index);
                     index++;
                     // Adjust typing speed here
-                    setTimeout(type, 50);
+                    setTimeout(type, 30);
                 }
             }
             type();
