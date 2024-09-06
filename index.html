@@ -3,174 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lycan's Hacking Terminal</title>
+    <title>Lycan's Terminal</title>
     <style>
         body {
-            background-color: #1e1e1e; /* Dark background for a terminal look */
-            color: #00ff00; /* Hacker green text */
-            font-family: 'Source Code Pro', monospace; /* Monospace font for terminal appearance */
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
         }
 
-        header {
-            background-color: #000000; /* Black header */
-            color: #00ff00; /* Hacker green text */
+        .terminal {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
             padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #00ff00; /* Green border */
-        }
-
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #282c34; /* Dark background for content */
+            border: 1px solid #0f0;
+            background: #000;
             border-radius: 5px;
-            border: 1px solid #00ff00; /* Green border */
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow */
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
         }
 
-        h1, h2 {
-            margin: 0;
-            padding: 0;
-            color: #00ff00; /* Hacker green */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
-        a {
-            color: #00ff00; /* Green links */
-            text-decoration: none;
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background-color: #f00;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .dot.yellow {
+            background-color: #ff0;
         }
 
-        p, blockquote, pre {
-            margin: 0 0 10px;
-            padding: 0;
+        .dot.green {
+            background-color: #0f0;
         }
 
-        blockquote {
-            border-left: 4px solid #00ff00; /* Green border for blockquotes */
-            padding-left: 15px;
-            color: #00ff00; /* Green text */
-            font-style: italic;
-            background-color: #1e1e1e; /* Dark background */
+        .title {
+            font-weight: bold;
         }
 
-        pre {
-            background-color: #2d2d2d; /* Darker background for code blocks */
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-
-        .typewriter {
+        .content {
             white-space: pre-wrap;
-            overflow: hidden;
-            border-right: 2px solid #00ff00; /* Green cursor */
-            animation: typing 4s steps(50, end), blink-caret .75s step-end infinite;
         }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        .prompt {
+            margin: 0;
         }
 
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #00ff00; }
+        .command {
+            color: #0f0;
         }
 
-        footer {
-            background-color: #000000; /* Black footer */
-            color: #00ff00; /* Green text */
-            text-align: center;
-            padding: 10px;
-            border-top: 2px solid #00ff00; /* Green border */
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .section-gap {
-            margin-top: 20px; /* Space between sections */
+        .output {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Lycan's Hacking Terminal</h1>
-        <h2>Welcome to the digital frontier</h2>
-    </header>
-    
-    <main>
-        <div id="content" class="typewriter">
-            <!-- Content will be dynamically inserted here -->
+    <div class="terminal">
+        <div class="header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <span class="title">lycan@hacker:~$</span>
         </div>
-    </main>
-    
-    <footer>
-        Thank you for visiting! 🚀<br>
-        *This site is crafted with HTML, CSS, and a touch of hacker aesthetic.*
-    </footer>
-
-    <script>
-        // Typewriter effect JavaScript
-        const contentElement = document.getElementById('content');
-        const contentLines = [
-            "Welcome to Lycan's Hacking Terminal! I’m thrilled to share my tech journey with you.",
-            "",
-            "About Me:",
-            "",
-            "I’m Lycan, a dedicated tech enthusiast and programmer with a keen eye for new challenges.",
-            "",
-            "My Skills:",
-            "",
-            "Programming Languages: JavaScript, Python, Ruby, and more.",
-            "Tech Interests: Cloud Computing, AI, and cutting-edge technologies.",
-            "Always Learning: Continuously evolving in the tech world.",
-            "",
-            "Community Role:",
-            "",
-            "I also moderate the Hack Nexus Discord, supporting and engaging with the community.",
-            "",
-            "The Thrill of Hacking:",
-            "",
-            "Hacking is about pushing boundaries, exploring new tech, and making innovations. It’s a world full of opportunities and excitement.",
-            "",
-            "Feel free to connect or reach out if you’re interested in tech or just want to chat!"
-        ];
-
-        let currentLine = 0;
-        let currentChar = 0;
-        let typingSpeed = 20; // Typing speed
-        let typingTimer;
-
-        function typeLine() {
-            if (currentLine >= contentLines.length) return;
-
-            const line = contentLines[currentLine];
-            const lineElement = document.createElement('p');
-            contentElement.appendChild(lineElement);
-
-            function typeCharacter() {
-                if (currentChar < line.length) {
-                    lineElement.textContent += line[currentChar++];
-                    typingTimer = setTimeout(typeCharacter, typingSpeed);
-                } else {
-                    currentChar = 0;
-                    currentLine++;
-                    setTimeout(typeLine, 500); // Delay between lines
-                }
-            }
-
-            typeCharacter();
-        }
-
-        typeLine();
-    </script>
+        <div class="content">
+            <p class="prompt">lycan@hacker:~$ <span class="command">about</span></p>
+            <p class="output">
+                <strong>About Lycan:</strong><br>
+                I am a passionate hacker and Discord moderator. My expertise lies in ethical hacking, where I use my skills to secure systems and find vulnerabilities. As a Discord mod, I ensure that the community remains a safe and enjoyable place for everyone. My interests include cybersecurity, coding, and contributing to open-source projects.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
