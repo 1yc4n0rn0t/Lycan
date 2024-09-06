@@ -23,6 +23,7 @@
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             overflow: hidden; /* Hide overflowing content */
+            position: relative; /* Position for cursor */
         }
 
         .header {
@@ -75,6 +76,7 @@
             white-space: nowrap;
             border-right: 2px solid #abb2bf; /* Cursor effect */
             animation: blink 0.75s step-end infinite;
+            font-family: 'Courier New', Courier, monospace; /* Match terminal font */
         }
 
         @keyframes blink {
@@ -108,9 +110,11 @@ I am a passionate hacker and Discord moderator. My expertise lies in ethical hac
             let index = 0;
             function type() {
                 if (index < text.length) {
+                    // Append character by character
                     output.innerHTML += text.charAt(index);
                     index++;
-                    setTimeout(type, 50); // Adjust typing speed here
+                    // Adjust typing speed here
+                    setTimeout(type, 50);
                 }
             }
             type();
